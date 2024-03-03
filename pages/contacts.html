@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <title>Контакты</title>
+</head>
+<body>
+    <header class="header-container">
+        <div class="header">
+            <a href="!#" class="logo">
+                <img src="../src/assets/img/icons/logo.svg" class="logo__img" alt="">
+                <p class="logo__text logo__header">Труд экспертиза</p>
+            </a>
+            <div class="header-resolution" id="menu">
+                <div class="header-resolution__wrapper">
+                    <nav class="header__menu">
+                        <ul class="menu">
+                            <li class="menu__item"><a href="about.html" class="menu__link link-hover link-hover--color_medium">О компании</a></li>
+                            <li class="menu__item"><a href="services.html" class="menu__link link-hover link-hover--color_medium">Услуги</a></li>
+                            <li class="menu__item"><a href="laboratory.html" class="menu__link link-hover link-hover--color_medium">Лаборатория</a></li>
+                            <li class="menu__item"><a href="education.html" class="menu__link link-hover link-hover--color_medium">Учебный центр</a></li>
+                            <li class="menu__item"><a href="reviews.html" class="menu__link link-hover link-hover--color_medium">Отзывы</a></li>
+                            <li class="menu__item"><a href="articles.html" class="menu__link link-hover link-hover--color_medium">Статьи</a></li>
+                            <li class="menu__item"><a href="contacts.html" class="menu__link link-hover link-hover--color_medium">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__contacts">
+                        <a href="tel:88006007810" class="phone">8 (800) 600-78-10</a>
+                        <small>Звоните, если нужна помощь</small>
+                        <button class="btn btn--header btn-hover btn-hover--gradient open-modal--consult">Заказать консультацию</button>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="header__btn-wrapper">
+                <a href="!#" class="btn-phone">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6933 14.3763C12.222 15.8477 8.45388 14.4652 5.27708 11.2884C2.10029 8.11156 0.717757 4.34349 2.18911 2.87212L3.15789 1.90335C3.82669 1.23455 4.92871 1.25222 5.61931 1.94283L7.11986 3.44338C7.81047 4.13399 7.82815 5.23601 7.15935 5.90481L6.95127 6.11289C6.59017 6.47399 6.55485 7.0565 6.89037 7.4631C7.214 7.85528 7.56291 8.24592 7.94121 8.62423C8.31952 9.00253 8.71015 9.35144 9.10234 9.67507C9.50893 10.0106 10.0915 9.97527 10.4525 9.61417L10.6606 9.40609C11.3294 8.73729 12.4314 8.75497 13.1221 9.44558L14.6226 10.9461C15.3132 11.6367 15.3309 12.7388 14.6621 13.4076L13.6933 14.3763Z" stroke-width="1.5"/>
+                        <path d="M12.6125 5.93029C12.4288 5.48219 12.1551 5.06237 11.7912 4.69852C11.4479 4.35523 11.0548 4.09212 10.6351 3.9092" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M10.6352 1.34719C11.64 1.71121 12.5828 2.296 13.3884 3.10157C14.2142 3.92736 14.808 4.89732 15.1698 5.93049" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </a>
+                <button class="btn-menu small-btn-hover small-btn-hover--circle" id="openMenu">
+                    <div class="btn-menu__burger">
+                        <span class="btn-menu__line"></span>
+                        <span class="btn-menu__line"></span>
+                        <span class="btn-menu__line"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="breadcrumb container">
+            <div class="breadcrumb__wrapper">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a href="/" class="breadcrumb__link">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <p class="breadcrumb__link breadcrumb__link--active">></p>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <a href="" class="breadcrumb__link breadcrumb__link--active">Офисы компании</a>
+                    </li>
+                </ul>
+                <h2 class="title-h2 title-h2--white breadcrumb__title">Офисы компании</h2>
+            </div>
+        </section>
+
+        <section class="section-top container">
+            <div class="office">
+                <div class="office__wrapper">
+                    <div class="tabs office-tabs">
+                        <div class="office-tabs__wrapper-list">
+                            <ul class="tabs__list office-tabs__list">
+                                <li class="active-tab">Чувашия</li>
+                                <li>Татарстан</li>
+                                <li>Мордовия</li>
+                                <li>Крым</li>
+                                <li>Смоленская обл.</li>
+                                <li>Ульяновская обл.</li>
+                            </ul>
+                        </div>
+                        <ul class="office-tabs__wrapper">
+                            <li class="tabs__content active">
+                                <div class="office-tabs__content">
+                                    <div class="map">
+                                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abca47556a5e10148b8a544fd2646cb53215e46a2b97502a0456a9a42655ff1a2&amp;source=constructor" frameborder="0"></iframe>
+                                    </div>
+                                    <div class="contacts">
+                                        <div class="contacts__item contacts__item--white">
+                                            <div class="icon icon--gradient">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M25.8032 27.099C23.0113 29.8909 15.8615 27.2676 9.83352 21.2396C3.8056 15.2117 1.18227 8.06186 3.97414 5.26996L5.81238 3.43173C7.08142 2.16269 9.17248 2.19623 10.4829 3.50665L13.3302 6.35392C14.6406 7.66434 14.6741 9.75541 13.4051 11.0244L13.0103 11.4193C12.3251 12.1045 12.2581 13.2098 12.8947 13.9813C13.5088 14.7254 14.1709 15.4667 14.8887 16.1845C15.6065 16.9023 16.3477 17.5644 17.0919 18.1785C17.8634 18.8151 18.9687 18.7481 19.6539 18.0629L20.0487 17.6681C21.3178 16.399 23.4088 16.4326 24.7192 17.743L27.5665 20.5903C28.8769 21.9007 28.9105 23.9918 27.6414 25.2608L25.8032 27.099Z" stroke="white" stroke-width="2" />
+                                                    <path d="M23.7506 11.0726C23.402 10.2224 22.8826 9.42575 22.1922 8.73536C21.5408 8.08396 20.7948 7.58472 19.9985 7.23763" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                                    <path d="M19.9994 2.37658C21.906 3.0673 23.6949 4.17693 25.2235 5.70549C26.7904 7.2724 27.9171 9.11289 28.6036 11.0733" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                                </svg>
+                                            </div>
+                                            <div class="phone__list">
+                                                <a href="tel:88006007810" class="contacts__link">8 (800) 600-78-10</a>
+                                                <a href="tel:89373892479" class="contacts__link">8 (937) 389-24-79</a>
+                                            </div>
+                                        </div>
+                                        <div class="contacts__item contacts__item--light">
+                                            <div class="icon icon--white">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.9996 17.7133C12.3371 17.7133 10.1621 15.5508 10.1621 12.8758C10.1621 10.2008 12.3371 8.05078 14.9996 8.05078C17.6621 8.05078 19.8371 10.2133 19.8371 12.8883C19.8371 15.5633 17.6621 17.7133 14.9996 17.7133ZM14.9996 9.92578C13.3746 9.92578 12.0371 11.2508 12.0371 12.8883C12.0371 14.5258 13.3621 15.8508 14.9996 15.8508C16.6371 15.8508 17.9621 14.5258 17.9621 12.8883C17.9621 11.2508 16.6246 9.92578 14.9996 9.92578Z" fill="#12C16F" />
+                                                    <path d="M15.0001 28.45C13.1501 28.45 11.2876 27.75 9.8376 26.3625C6.1501 22.8125 2.0751 17.15 3.6126 10.4125C5.0001 4.3 10.3376 1.5625 15.0001 1.5625C15.0001 1.5625 15.0001 1.5625 15.0126 1.5625C19.6751 1.5625 25.0126 4.3 26.4001 10.425C27.9251 17.1625 23.8501 22.8125 20.1626 26.3625C18.7126 27.75 16.8501 28.45 15.0001 28.45ZM15.0001 3.4375C11.3626 3.4375 6.6876 5.375 5.4501 10.825C4.1001 16.7125 7.8001 21.7875 11.1501 25C13.3126 27.0875 16.7001 27.0875 18.8626 25C22.2001 21.7875 25.9001 16.7125 24.5751 10.825C23.3251 5.375 18.6376 3.4375 15.0001 3.4375Z" fill="#12C16F" />
+                                                </svg>
+                                            </div>
+                                            <p class="contacts__text">г. Чебоксары, ул. Шумилова, д. 20</p>
+                                        </div>
+                                        <div class="contacts__item contacts__item--dark">
+                                            <div class="icon icon--white">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="2.5" y="5" width="25" height="20" rx="6.25" stroke="#0A8E5A" stroke-width="2" />
+                                                    <path d="M7.5 11.25L13.5 15.75C14.3889 16.4167 15.6111 16.4167 16.5 15.75L22.5 11.25" stroke="#0A8E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <a href="mailto:sout@trud-rf.ru" class="contacts__text">sout@trud-rf.ru</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tabs__content">
+                            Содержимое 2 блока
+                            </li>
+                            <li class="tabs__content">
+                            Содержимое 3 блока
+                            </li>
+                            <li class="tabs__content">
+                            Содержимое 4 блока
+                            </li>
+                            <li class="tabs__content">
+                            Содержимое 5 блока
+                            </li>
+                            <li class="tabs__content">
+                            Содержимое 6 блока
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="attention">
+                <div class="attention__info">
+                    <h2 class="title-h2 title-h2--white">Получите бесплатную консультацию или точный расчет стоимости</h2>
+                    <div class="form-contacts">
+                        <div class="form-contacts__item">
+                            <div class="icon icon--white">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25.8032 27.099C23.0113 29.8909 15.8615 27.2676 9.83352 21.2396C3.8056 15.2117 1.18227 8.06186 3.97414 5.26996L5.81238 3.43173C7.08142 2.16269 9.17248 2.19623 10.4829 3.50665L13.3302 6.35392C14.6406 7.66434 14.6741 9.75541 13.4051 11.0244L13.0103 11.4193C12.3251 12.1045 12.2581 13.2098 12.8947 13.9813C13.5088 14.7254 14.1709 15.4667 14.8887 16.1845C15.6065 16.9023 16.3477 17.5644 17.0919 18.1785C17.8634 18.8151 18.9687 18.7481 19.6539 18.0629L20.0487 17.6681C21.3178 16.399 23.4088 16.4326 24.7192 17.743L27.5665 20.5903C28.8769 21.9007 28.9105 23.9918 27.6414 25.2608L25.8032 27.099Z" stroke="#0A8E5A" stroke-width="2" />
+                                    <path d="M23.7525 11.0724C23.404 10.2221 22.8845 9.4255 22.1941 8.73511C21.5427 8.08371 20.7968 7.58447 20.0004 7.23739" stroke="#0A8E5A" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M20.0004 2.37658C21.907 3.0673 23.6959 4.17693 25.2245 5.70549C26.7914 7.2724 27.9181 9.11289 28.6046 11.0733" stroke="#0A8E5A" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="form-contacts__body">
+                                <a href="tel:88006007810" class="title-h5 form-contacts__link">8 (800) 600-78-10</a>
+                                <a href="tel:89373892479" class="title-h5  form-contacts__link">8 (937) 389-24-79</a>
+                            </div>
+                        </div>
+                        <div class="form-contacts__item">
+                            <div class="icon icon--white">
+                                <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="1.5" y="1" width="25" height="20" rx="6.25" stroke="#0A8E5A" stroke-width="2" />
+                                    <path d="M6.5 7.25L12.5 11.75C13.3889 12.4167 14.6111 12.4167 15.5 11.75L21.5 7.25" stroke="#0A8E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="form-contacts__body">
+                                <a href="mailto:sout@trud-rf.ru" class="title-h5 form-contacts__link">sout@trud-rf.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="attention__form">
+                    <p class="attention__title text-xl">Оставьте заявку, наши специалисты свяжутся с вами и проконсультируют по возникшим вопросам</p>
+                    <form method="POST" class="form">
+                        <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+                        <input type="text" class="form__input" name="phone" placeholder="+7 (999) 999 99-99">
+                        <div class="form__bottom">
+                            <button type="submit" class="btn btn--form btn-hover btn-hover--gradient">Заказать расчет</button>
+                            <small>Нажимая на кнопку “Отправить заявку “, вы даете согласие на обработку <a href="">персональных данных</a>, указанных в заявке.</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <script src="../src/js/jquery.min.js"></script>
+    <script src="../src/js/swiper-bundle.min.js"></script>
+    <script src="../src/js/swiper.js"></script>
+    <script src="../src/js/script.js"></script>
+</body>
+</html>

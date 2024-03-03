@@ -1,0 +1,307 @@
+.directions {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.directions__card {
+    padding: 30px;
+    border-radius: 12px;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.directions__img {
+    aspect-ratio: 16/9;
+    display: flex;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 12px;
+    width: 100%;
+}
+.directions__text {
+    margin-top: 15px;
+}
+.directions__body {
+    margin: 20px 0;
+}
+.btn-directions {
+    width: fit-content;
+    margin-top: auto;
+    padding: 17px 67px;
+}
+
+.faq {
+    margin-top: 35px;
+    display: grid;
+    gap: 15px;
+}
+
+.accordion__item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.faq__title {
+    background: var(--white);
+    padding: 12px 30px;
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq__title p {
+    text-align: start;
+    pointer-events: none;
+}
+.btn-more-details {
+    pointer-events: none;
+}
+.btn-more-details div {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.btn-more-details div::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 2px;
+    background: var(--white);
+}
+.btn-more-details div::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 16px;
+    background: var(--white);
+    transition: all .2s ease-in-out;
+}
+.btn-more-details div.active::before {
+    transform: translateY(-200%);
+}
+.faq__body {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    padding: 0 30px;
+    border-radius: 12px;
+    background: var(--white);
+    transition: all .3s ease;
+}
+.accordion-content.open {
+    padding: 30px;
+    grid-template-rows: 1fr;
+}
+.faq-grid {
+    min-height: 0;
+    display: grid;
+}
+.faq-grid--one {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+.faq-grid--two {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    column-gap: 80px;
+}
+.faq-grid--four {
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+}
+.faq-grid__item {
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+}
+.faq-grid__title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--black);
+}
+.faq-grid__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: rgba(20, 15, 20, 0.8);
+}
+.faq-grid__text a {
+    color: rgba(20, 15, 20, 0.8);
+}
+
+.document-list__link {
+    text-decoration: underline !important;
+}
+.faq-grid__item--document {
+    gap: 15px;
+}
+
+.standard-list__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--black);
+    padding-left: 24px;
+    opacity: 0.8;
+}
+.standard-list__item::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    display: flex;
+    flex-shrink: 0;
+    width: 5px;
+    height: 5px;
+    background: var(--black);
+    border-radius: 50%;
+}
+
+.cart-icon {
+    position: fixed;
+    top: 170px;
+    right: 0;
+    z-index: 5;
+}
+.cart-icon__text {
+    display: none;
+}
+.cart-icon__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background: var(--green-light);
+    transition: all .3s ease;
+    border: 1px solid var(--green-light);
+}
+.cart-icon__wrapper:hover {
+    background: transparent;
+}
+.cart-icon__wrapper svg {
+    stroke: var(--white);
+    transition: all .3s ease;
+}
+.cart-icon__wrapper:hover svg {
+    stroke: var(--green-light);
+}
+
+
+@media(max-width: 1440px) {
+    .directions {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    .faq-grid--four {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .standard-list__item {
+        padding-left: 16px;
+    }
+    .standard-list__item::before {
+        content: '';
+        left: 6px;
+        top: 10px;
+    }
+}
+
+@media(max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: unset;
+    }
+
+    .faq-grid__title, .faq-grid__text {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 480px) {
+    .directions {
+        margin-top: 10px;
+        grid-template-columns: unset;
+        gap: 10px;
+    }
+    .directions__card {
+        padding: 20px 20px 12px;
+    }
+    .btn-directions {
+        padding: 14px 37px;
+    }
+
+    .faq-grid__title, .faq-grid__text {
+        font-size: 14px;
+    }
+    
+    .faq {
+        margin-top: 16px;
+        gap: 16px;
+    }
+    .faq__title {
+        padding: 20px;
+    }
+    .accordion-content {
+        padding: 0 20px;
+    }
+    .accordion-content.open {
+        padding: 12px 20px;
+    }
+
+    .cart-icon {
+        top: unset;
+        bottom: 0;
+        left: 0;
+    }
+    .cart-icon__text {
+        display: block;
+    }
+    .cart-icon__text {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.4;
+        color: var(--black);
+    }
+    .cart-icon__wrapper {
+        gap: 15px;
+        width: 100%;
+        height: 60px;
+        border-top-left-radius: unset;
+        border-bottom-left-radius: unset;
+        background: var(--white);
+        transition: all .3s ease;
+        border: unset;
+    }
+    .cart-icon__wrapper:hover {
+        background: var(--white);
+    }
+    .cart-icon__wrapper svg {
+        stroke: var(--green-light);
+        transition: all .3s ease;
+    }
+    .cart-icon__wrapper:hover svg {
+        stroke: var(--green-light);
+    }
+}

@@ -1,0 +1,22 @@
+.swiper-reviews__head--between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    gap: 40px;
+}
+.reviews__text--subtitle {
+    max-width: 680px;
+}
+
+.reviews-doc .swiper-reviews__wrapper {
+    margin-top: 35px;
+}
+
+@media(max-width: 480px) {
+    .section:has(.reviews-doc) {
+        margin-top: 40px;
+    }
+    .reviews-doc .swiper-reviews__wrapper {
+        margin-top: 20px;
+    }
+}

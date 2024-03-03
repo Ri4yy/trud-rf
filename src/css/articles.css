@@ -1,0 +1,130 @@
+.articles__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(430px,1fr));
+    gap: 25px;
+}
+.articles__card {
+    display: flex !important;
+    flex-direction: column;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    height: auto !important;
+}
+.articles__img {
+    aspect-ratio: 16/9;
+    display: flex;
+    overflow: hidden;
+    border-radius: 12px;
+    object-fit: cover;
+    width: 100%;
+}
+.articles__card-description {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 25px;
+}
+.articles__name {
+    color: var(--black);
+}
+.articles__text {
+    flex-grow: 1;
+    margin-top: 15px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--black);
+    opacity: .8;
+}
+.articles__card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+.articles__card-bottom .price {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: rgba(20, 15, 20, 0.5);
+}
+.articles__card-bottom .price span {
+    color: var(--black);
+}
+.btn-more {
+    display: block;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.4;
+    color: var(--black);
+    margin: 60px auto 0;
+    padding: 19px 100px;
+    border: 1.5px solid var(--green-light);
+    border-radius: 100px;
+}
+
+@media (max-width: 916px) {
+    .articles__wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+    }
+}
+
+@media(max-width: 800px) {
+    .articles__card-bottom .btn--card {
+        padding: 17px 20px;
+    }
+}
+
+@media(max-width: 768px) {
+    .articles__wrapper {
+        gap: 10px;
+    }
+}
+
+@media(max-width: 600px) {
+    .articles__card {
+        padding: 20px;
+    }
+    .articles__card-description {
+        margin-top: 16px;
+    }
+    .articles__card-bottom {
+        margin-top: 30px;
+    }
+    .articles__card-bottom .price {
+        font-size: 16px;
+    }
+    .articles__text {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 480px) {
+    .articles__wrapper {
+        grid-template-columns: unset;
+    }
+    .articles__text {
+        margin-top: 10px;
+    }
+
+    .btn-more {
+        margin-top: 20px !important;
+        padding: 17px 0;
+        width: 100%;
+    }
+}
+
+@media(max-width: 375px) {
+    .articles__card {
+        padding: 16px;
+    }
+    .articles__card-bottom .btn--card {
+        padding: 15px;
+        font-size: 15px;
+    }
+}

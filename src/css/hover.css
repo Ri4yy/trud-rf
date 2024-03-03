@@ -1,0 +1,109 @@
+.link-hover {
+    display: inline-block;
+    position: relative;
+    transition: color .25s ease;
+}
+.link-hover--color_medium:hover {
+    color: var(--green-medium) !important;
+}
+.link-hover--color_dark:hover {
+    color: var(--green-dark) !important;
+}
+.link-hover:hover::before {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.link-hover::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -0.25rem;
+    width: 0;
+    height: 2px;
+    background: var(--green-medium);
+    transition: width .25s ease-out;
+}
+
+.btn-hover {
+    transition: all .3s ease;
+}
+.btn-hover:hover {
+    --x: 100%; 
+    color: var(--white);
+}
+.btn-hover--gradient {
+    background: linear-gradient(315deg, var(--c1, var(--green-medium)), var(--c2, var(--green-light)) 51%, var(--c1, var(--green-medium))) var(--x, 0)/ 200% !important;
+    --c1: var(--green-medium);
+    --c2: var(--green-light);
+}
+
+.btn-phone svg,
+.btn-phone {
+    stroke: var(--green-medium);
+    transition: all .3s ease;
+}
+.btn-phone:hover {
+    background: var(--green-medium);
+}
+.btn-phone:hover svg {
+    stroke: var(--white);
+}
+
+
+.small-btn-hover {
+    position: relative;
+    transition: all .3s ease;
+}
+.small-btn-hover:hover {
+    background: var(--white);
+}
+.small-btn-hover--circle::before {
+    border-radius: 50px;
+}
+.small-btn-hover--square:hover {
+    background: transparent;
+}
+.small-btn-hover--square::before {
+    border-radius: 12px;
+}
+.small-btn-hover:hover::before {
+    content: "";
+    padding: 1px;
+    inset: 0;
+    position: absolute;
+    background: var(--main-gradient);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+}
+.small-btn-hover:hover .btn-menu__burger .btn-menu__line {
+    background: var(--main-gradient);
+}
+.small-btn-hover:hover svg {
+    stroke: var(--green-light);
+}
+
+
+.footer__link:hover {
+    color: var(--green-medium);
+}
+.footer__bottom a {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+.footer__bottom a:hover {
+    color: rgb(235, 235, 235);
+}
+
+
+.cart-btn--clear svg {
+    stroke: var(--black);
+    transition: all .2s ease;
+}
+.cart-btn--clear:hover {
+    background: transparent;
+}
+.cart-btn--clear:hover svg {
+    stroke: var(--green-medium);
+}

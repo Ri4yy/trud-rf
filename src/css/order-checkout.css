@@ -1,0 +1,210 @@
+.order {
+    display: flex;
+    flex-direction: column;
+}
+.order__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 25px;
+}
+.order__info {
+    padding: 50px;
+    border-radius: 12px;
+    background: var(--white);
+}
+.form-order,
+.order__payment-method {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.order__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--black);
+}
+
+.form-order__input {
+    border: 1px solid #B2B5BA;
+    border-radius: 100px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--black);
+    opacity: .7;
+    padding: 19px 28px;
+}
+.form-order__textarea {
+    border: 1px solid #B2B5BA;
+    border-radius: 15px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--black);
+    opacity: .7;
+    padding: 20px 28px;
+    resize: none;
+    min-height: 150px;
+    outline: none;
+}
+
+.order__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+.order__action {
+    display: flex;
+    gap: 15px;
+}
+.btn-prev {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.4;
+    color: var(--black);
+    text-align: center;
+    padding: 17px 92px;
+    border-radius: 100px;
+    border: 1px solid var(--gray);
+}
+.btn-make {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 19px 100px;
+}
+.order__current p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--black);
+}
+.order__current p span {
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.order-success {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+    border-radius: 12px;
+    background: var(--white);
+}
+.order-success__message {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--black);
+    opacity: 0.8;
+}
+
+.radio-wrapper input[type=radio] {
+	display: none;
+}
+.radio-wrapper label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 35px;
+	margin-right: 0;
+	line-height: 20px;
+	user-select: none;
+}
+.radio-wrapper label:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background: url(../assets/img/icons/radio-1.png) 0 0 no-repeat;
+}
+.radio-wrapper input[type=radio]:checked + label:before {
+	background: url(../assets/img/icons/radio-2.png) 0 0 no-repeat;
+}
+.radio-wrapper label:hover:before {
+	filter: brightness(120%);
+}
+.radio-wrapper input[type=radio]:disabled + label:before {
+	filter: grayscale(100%);
+}
+
+
+@media(max-width: 960px) {
+    .order__bottom {
+        margin-top: 40px;
+        gap: 20px;
+        flex-direction: column;
+        align-items: start;
+    }
+    .order__current {
+        order: 1;
+    }
+    .order__action {
+        order: 2;
+    }
+}
+
+@media(max-width: 768px) {
+    .order__info {
+        padding: 40px;
+    }
+    .form-order, .order__payment-method {
+        margin-top: 20px;
+        gap: 15px;
+    }
+    .order__wrapper {
+        grid-template-columns: unset;
+    }
+    .order__current p {
+        font-size: 20px;
+    }
+    .btn-make {
+        padding: 14px 30px;
+    }
+    .btn-prev {
+        padding: 14px 32px;
+    }
+
+    .order-success {
+        padding: 40px;
+    }
+}
+
+@media(max-width: 480px) {
+    .order__info {
+        padding: 20px;
+    }
+    .form-order__input{
+        padding: 14px 28px;
+    }
+    .order__action {
+        flex-direction: column;
+        width: 100%;
+    }
+    .order__current p {
+        font-size: 18px;
+    }
+    .btn-make {
+        width: 100%;
+        padding: 14px 28px;
+    }
+    .btn-prev {
+        padding: 14px 28px;
+    }
+
+    .order-success {
+        padding: 20px;
+    }
+}

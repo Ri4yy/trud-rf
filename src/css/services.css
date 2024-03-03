@@ -1,0 +1,105 @@
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(430px,1fr));
+    gap: 25px;
+}
+.services__card {
+    display: flex !important;
+    flex-direction: column;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    height: auto !important;
+}
+.services__img {
+    aspect-ratio: 16/9;
+    display: flex;
+    overflow: hidden;
+    border-radius: 12px;
+    object-fit: cover;
+    width: 100%;
+}
+.services__card-description {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 25px;
+}
+.services__name {
+    color: var(--black);
+}
+.services__text {
+    flex-grow: 1;
+    margin-top: 15px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--black);
+    opacity: .8;
+}
+.services__card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+.services__card-bottom .price {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: rgba(20, 15, 20, 0.5);
+}
+.services__card-bottom .price span {
+    color: var(--black);
+}
+
+@media (max-width: 916px) {
+    .services {
+        grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+    }
+}
+
+@media(max-width: 768px) {
+    .services {
+        gap: 10px;
+    }
+}
+
+@media(max-width: 600px) {
+    .services__card {
+        padding: 20px;
+    }
+    .services__card-description {
+        margin-top: 16px;
+    }
+    .services__card-bottom {
+        margin-top: 30px;
+    }
+    .services__card-bottom .price {
+        font-size: 16px;
+    }
+    .services__text {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 480px) {
+    .services {
+        grid-template-columns: unset;
+    }
+    .section:has(.services) {
+        margin-top: 60px;
+    }
+    .services__text {
+        margin-top: 10px;
+    }
+}
+
+@media(max-width: 375px) {
+    .services__card {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,24 @@
+@media (max-width: 1732px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+    .title-h1 {
+        font-size: 50px;
+        line-height: 1.1;
+    }
+    .title-h2 {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+    .title-h4 {
+        font-size: 32px;
+        line-height: 1.4;
+    }
+}

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <title>Учебный центр</title>
+</head>
+<body>
+    <header class="header-container">
+        <div class="header">
+            <a href="/" class="logo">
+                <img src="../src/assets/img/icons/logo.svg" class="logo__img" alt="">
+                <p class="logo__text logo__header">Труд экспертиза</p>
+            </a>
+            <div class="header-resolution" id="menu">
+                <div class="header-resolution__wrapper">
+                    <nav class="header__menu">
+                        <ul class="menu">
+                            <li class="menu__item"><a href="about.html" class="menu__link link-hover link-hover--color_medium">О компании</a></li>
+                            <li class="menu__item"><a href="services.html" class="menu__link link-hover link-hover--color_medium">Услуги</a></li>
+                            <li class="menu__item"><a href="laboratory.html" class="menu__link link-hover link-hover--color_medium">Лаборатория</a></li>
+                            <li class="menu__item"><a href="education.html" class="menu__link link-hover link-hover--color_medium">Учебный центр</a></li>
+                            <li class="menu__item"><a href="reviews.html" class="menu__link link-hover link-hover--color_medium">Отзывы</a></li>
+                            <li class="menu__item"><a href="articles.html" class="menu__link link-hover link-hover--color_medium">Статьи</a></li>
+                            <li class="menu__item"><a href="contacts.html" class="menu__link link-hover link-hover--color_medium">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__contacts">
+                        <a href="tel:88006007810" class="phone">8 (800) 600-78-10</a>
+                        <small>Звоните, если нужна помощь</small>
+                        <button class="btn btn--header btn-hover btn-hover--gradient open-modal--consult">Заказать консультацию</button>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="header__btn-wrapper">
+                <a href="!#" class="btn-phone">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6933 14.3763C12.222 15.8477 8.45388 14.4652 5.27708 11.2884C2.10029 8.11156 0.717757 4.34349 2.18911 2.87212L3.15789 1.90335C3.82669 1.23455 4.92871 1.25222 5.61931 1.94283L7.11986 3.44338C7.81047 4.13399 7.82815 5.23601 7.15935 5.90481L6.95127 6.11289C6.59017 6.47399 6.55485 7.0565 6.89037 7.4631C7.214 7.85528 7.56291 8.24592 7.94121 8.62423C8.31952 9.00253 8.71015 9.35144 9.10234 9.67507C9.50893 10.0106 10.0915 9.97527 10.4525 9.61417L10.6606 9.40609C11.3294 8.73729 12.4314 8.75497 13.1221 9.44558L14.6226 10.9461C15.3132 11.6367 15.3309 12.7388 14.6621 13.4076L13.6933 14.3763Z" stroke-width="1.5"/>
+                        <path d="M12.6125 5.93029C12.4288 5.48219 12.1551 5.06237 11.7912 4.69852C11.4479 4.35523 11.0548 4.09212 10.6351 3.9092" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M10.6352 1.34719C11.64 1.71121 12.5828 2.296 13.3884 3.10157C14.2142 3.92736 14.808 4.89732 15.1698 5.93049" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </a>
+                <button class="btn-menu small-btn-hover small-btn-hover--circle" id="openMenu">
+                    <div class="btn-menu__burger">
+                        <span class="btn-menu__line"></span>
+                        <span class="btn-menu__line"></span>
+                        <span class="btn-menu__line"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="breadcrumb container">
+            <div class="breadcrumb__wrapper">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a href="/" class="breadcrumb__link">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <p class="breadcrumb__link breadcrumb__link--active">></p>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <a href="" class="breadcrumb__link breadcrumb__link--active">Учебный центр</a>
+                    </li>
+                </ul>
+                <h2 class="title-h2 title-h2--white breadcrumb__title">Учебный центр</h2>
+                <p class="breadcrumb__text">Описание учебного центра</p>
+            </div>
+        </section>
+
+        <a href="cart.html" class="cart-icon">
+            <div class="cart-icon__wrapper">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.25 26.25C22.6307 26.25 23.75 25.1307 23.75 23.75C23.75 22.3693 22.6307 21.25 21.25 21.25C19.8693 21.25 18.75 22.3693 18.75 23.75C18.75 25.1307 19.8693 26.25 21.25 26.25Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M10 26.25C11.3807 26.25 12.5 25.1307 12.5 23.75C12.5 22.3693 11.3807 21.25 10 21.25C8.61929 21.25 7.5 22.3693 7.5 23.75C7.5 25.1307 8.61929 26.25 10 26.25Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.75 3.75H5.23948C5.8289 3.75 6.33823 4.16175 6.46173 4.73809L9.78827 20.2619C9.91177 20.8382 10.4211 21.25 11.0105 21.25H21.25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7.5 7.5H24.5885C25.4203 7.5 26.02 8.29724 25.7895 9.09645L23.626 16.5965C23.4717 17.1316 22.9819 17.5 22.425 17.5H9.66346" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="cart-icon__text">Корзина</span>
+            </div>
+        </a>
+
+        <section class="section-top container">
+            <h2 class="title-h2">Направления обучения</h2>
+            <div class="directions">
+                <div class="directions__card">
+                    <img src="../src/assets/img/slider/directions-1.png" class="directions__img" alt="">
+                    <div class="directions__body">
+                        <p class="text-xl">Охрана труда</p>
+                        <p class="directions__text description">Очное обучение по общим вопросам охраны труда и функционирования системы управления охраной труда</p>
+                    </div>
+                    <a class="btn btn-directions btn-hover btn-hover--gradient" href="courses.html">Смотреть курсы</a>
+                </div>
+                <div class="directions__card">
+                    <img src="../src/assets/img/slider/directions-2.png" class="directions__img" alt="">
+                    <div class="directions__body">
+                        <p class="text-xl">Дистанционные курсы</p>
+                        <p class="directions__text description">Очное обучение по общим вопросам охраны труда и функционирования системы управления охраной труда</p>
+                    </div>
+                    <a class="btn btn-directions btn-hover btn-hover--gradient" href="courses-2.html">Смотреть курсы</a>
+                </div>
+                <div class="directions__card">
+                    <img src="../src/assets/img/slider/directions-3.png" class="directions__img" alt="">
+                    <div class="directions__body">
+                        <p class="text-xl">Профессиональная переподготовка</p>
+                        <p class="directions__text description">Обучение по повышению квалификации в области охраны труда — более 50 программ — с выдачей удостоверения о повышении квалификации</p>
+                    </div>
+                    <a class="btn btn-directions btn-hover btn-hover--gradient" href="courses.html">Смотреть курсы</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container">
+            <h2 class="title-h2">Информация</h2>
+            <div class="faq accordion">
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Основные сведения</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--two">
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__title">Полное наименование образовательной организации:</p>
+                                    <p class="faq-grid__text">"Общество с ограниченной ответственностью «Труд-Экспертиза»"</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Сокращенное наименование образовательной организации:</p>
+                                    <p class="faq-grid__text">ООО «Труд-Экспертиза»</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Дата создания образовательной организации:</p>
+                                    <p class="faq-grid__text">11 августа 2021</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Учредитель образовательной организации:</p>
+                                    <p class="faq-grid__text">Егорова Ираида Витальевна</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Место нахождения образовательной организации:</p>
+                                    <p class="faq-grid__text">428031, Чувашская Республика, г. Чебоксары, ул. Шумилова, д. 20, помещение 12/3</p>
+                                </div>
+                            </div>
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__title">Место осуществления образовательной деятельности:</p>
+                                    <p class="faq-grid__text">428031, Чувашская Республика, г. Чебоксары, ул. Шумилова, д. 20, помещение 12/3</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Режим и график работы:</p>
+                                    <p class="faq-grid__text">понедельник – пятница: с 08.00 до 17.00,</p>
+                                    <p class="faq-grid__text">суббота – воскресенье: выходные дни</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Контактные телефоны:</p>
+                                    <a href="tel:88006007810" class="faq-grid__text">8 (800) 600-78-10</a>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Адрес электронной почты:</p>
+                                    <a href="mailto:nnv@trud-rf.ru" class="faq-grid__text">nnv@trud-rf.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Структура и органы управления образовательной организацией</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--four">
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__title">Директор:</p>
+                                    <p class="faq-grid__text">Егоров Алексей Константинович</p>
+                                    <p class="faq-grid__text">Телефон: <a href="tel:89373892479">8 (937) 389-24-79</a></p>
+                                    <p class="faq-grid__text">E-mail: <a href="mailto:1@trud-rf.ru">1@trud-rf.ru</a></p>
+                                </div>
+                            </div>
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__title">Бухгалтерия:</p>
+                                    <p class="faq-grid__text">Логинова Марина Алексеевна</p>
+                                    <p class="faq-grid__text">Телефон: <a href="tel:89278508811">8 (927) 850-88-11</a></p>
+                                    <p class="faq-grid__text">E-mail: <a href="mailto:lma@trud-rf.ru">lma@trud-rf.ru</a></p>
+                                </div>
+                            </div>
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__title">Бухгалтерия:</p>
+                                    <p class="faq-grid__text">Никитина Наталия Варсонофьевна</p>
+                                    <p class="faq-grid__text">Телефон: <a href="tel:89373759591">8 (937) 375-95-91, </a><a href="tel:89662491069">8 (966) 249-10-69</a></p>
+                                    <p class="faq-grid__text">E-mail: <a href="mailto:nnv@trud-rf.ru">nnv@trud-rf.ru</a></p>
+                                </div>
+                            </div>
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__title">Отдел продаж:</p>
+                                    <p class="faq-grid__text">Матвеев Роман Юрьевич</p>
+                                    <p class="faq-grid__text">Телефон: <a href="tel:89370121828">8 (937) 012-18-28, </a><a href="tel:89662491069">8 (966) 249-10-69</a></p>
+                                    <p class="faq-grid__text">E-mail: <a href="mailto:rop@trud-rf.ru">rop@trud-rf.ru</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Документы</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--one">
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__title">Документы:</p>
+                                <ul class="document-list">
+                                    <li class="document-list__item">
+                                        <a href="#" class="document-list__link faq-grid__text">Устав образовательной организации</a>
+                                    </li>
+                                    <li class="document-list__item">
+                                        <a href="#" class="document-list__link faq-grid__text">Свидетельство о государственной регистрации</a>
+                                    </li>
+                                    <li class="document-list__item">
+                                        <a href="#" class="document-list__link faq-grid__text">Выписка из реестра лицензий</a>
+                                    </li>
+                                    <li class="document-list__item">
+                                        <a href="#" class="document-list__link faq-grid__text">Аккредитация в Министерстве труда</a>
+                                    </li>
+                                    <li class="document-list__item">
+                                        <a href="#" class="document-list__link faq-grid__text">Правила внутреннего распорядка обучающихся</a>
+                                    </li>
+                                    <li class="document-list__item">
+                                        <a href="#" class="document-list__link faq-grid__text">Правила внутреннего трудового распорядка</a>
+                                    </li>
+                                    <li class="document-list__item">
+                                        <a href="#" class="document-list__link faq-grid__text">Отчет о результатах самообследования (за 2022 год)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__text">Предписания органов, осуществляющих государственный контроль (надзор) в сфере образования, отчеты об исполнении таких предписаний (до подтверждения органом, осуществляющим государственный контроль (надзор) в сфере образования, исполнения предписания или признания его недействительным в установленном законом порядке) – отсутствуют.</p>
+                            </div>
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__title">Локальные нормативные акты образовательной организации по основным вопросам организации и осуществления образовательной деятельности:</p>
+                                <ul class="standard-list">
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">Положение о приеме, переводе, отчислении и восстановлении обучающихся</a>
+                                    </li>
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">Положение об организации учебного процесса</a>
+                                    </li>
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">Порядок оформления возникновения, приостановления и прекращения отношений между образовательной организацией и обучающимися</a>
+                                    </li>
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">Положение об аттестации обучающихся</a>
+                                    </li>
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">Положение об оказании платных образовательных услуг</a>
+                                    </li>
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">Положение о комиссии по урегулированию споров</a>
+                                    </li>
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">Образец договора об оказании платных образовательных услуг</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Образовательные стандарты</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--one">
+                            <div class="faq-grid__item">
+                                <p class="faq-grid__text">Образовательные стандарты по программам дополнительного профессионального образования законодательством РФ не предусмотрены.:</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Образовательные стандарты</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--one">
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__title">Егоров Алексей Константинович, директор</p>
+                                    <p class="faq-grid__text">Образование - среднее профессиональное, БОУ ЧР СПО «Чебоксарский техникум строительства 
+                                        и городского хозяйства» Министерства образования и молодежной политики 
+                                        Чувашской Республики г. Чебоксары, 2014.</p>
+                                    <p class="faq-grid__text">Специальность - Строительство и 
+                                        эксплуатация зданий и сооружений.</p>
+                                    <p class="faq-grid__text">Сведения о дополнительном образовании:</p>
+                                    <p class="faq-grid__text">1. ФГБОУ ВПО «Российский государственный социальный университет», 2015, 
+                                        профессиональная переподготовка по программе «Менеджмент охраны труда».</p>
+                                    <p class="faq-grid__text">2. ООО «Смарта», 2022, повышения квалификации «Подготовка преподавателей, 
+                                        обучающих приемам оказания первой помощи».</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Егорова Ираида Витальевна, преподаватель</p>
+                                    <p class="faq-grid__text">Образование – высшее, ФГБОУ ВПО «Российский государственный социальный университет», 2012.</p>
+                                    <p class="faq-grid__text">Специальность – Экология.</p>
+                                    <p class="faq-grid__text">Сведения о дополнительном образовании:</p>
+                                    <p class="faq-grid__text">ООО «ГАРАНТИЯ БЕЗОПАСНОСТИ» г. Чебоксары, 2017, Повышение квалификации по дополнительной профессиональной программе «Инструктор по навыкам оказания первой помощи».</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Никитина Наталия Варсонофьевна, преподаватель</p>
+                                    <p class="faq-grid__text">Образование – высшее, Чувашский государственный педагогический университет имения И.Я. Яковлева, 2001.</p>
+                                    <p class="faq-grid__text">Специальность - Педагогика и методика начального образования и Английский язык.</p>
+                                    <p class="faq-grid__text">Сведения о дополнительном образовании:</p>
+                                    <p class="faq-grid__text">1. Поволжский межрегиональный филиал федерального государственного бюджетного учреждения «Всероссийский научно-исследовательский институт труда» Министерства труда и социальной защиты РФ, 2021, профессиональная переподготовка по программе «Охрана труда и техносферная безопасность».</p>
+                                    <p class="faq-grid__text">2. ООО «Смарта», 2022, повышения квалификации «Подготовка преподавателей, обучающих приемам оказания первой помощи».</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Савинов Димитрий Владимирович, преподаватель</p>
+                                    <p class="faq-grid__text">Образование – высшее, ГОУ ВПО Волго-Вятская академия государственной службы, 2007.</p>
+                                    <p class="faq-grid__text">Специальность - Менеджмент организации.</p>
+                                    <p class="faq-grid__text">Сведения о дополнительном образовании:</p>
+                                    <p class="faq-grid__text">1. ФГБОУ ВПО «Российский государственный социальный университет», 2015, профессиональная переподготовка по программе «Менеджмент охраны труда».</p>
+                                    <p class="faq-grid__text">2. ООО «Смарта», 2022, повышения квалификации «Подготовка преподавателей, обучающих приемам оказания первой помощи».</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__title">Талантов Николай Александрович, преподаватель</p>
+                                    <p class="faq-grid__text">Образование – высшее, ФГБОУ ВПО «Чувашский государственный педагогический университет имения И.Я. Яковлева», 2015.</p>
+                                    <p class="faq-grid__text">Специальность - Пожарная безопасность</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Материально-техническое обеспечение и оснащенность образовательного процесса</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--one">
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__title">Сведения об оборудованных учебных кабинетах, об объектах для проведения практических занятий</p>
+                                <p class="faq-grid__text">Учебный класс, расположенный по адресу: 428031, Чувашская Республика, г. Чебоксары, ул. Шумилова, д. 20, помещение 12/3. Учебно-тренировочный полигон «АЛЬПИНИСТ-2". Для реализации практического обучения центр использует материально-техническую базу предприятий-партнеров, либо Заказчиков.</p>
+                            </div>
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__title">Сведения о библиотеке(ах) – отсутствуют.</p>
+                            </div>
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__title">Сведения об объектах спорта – отсутствуют.</p>
+                            </div>
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__title">Сведения о средствах обучения и воспитания</p>
+                                <p class="faq-grid__text">Учебный класс оборудован современными средствами обучения и воспитания: компьютер; мультимедийные проектор; цифровая фото-видеокамера; мультимедийная акустическая система; беспроводной микрофон; экран настенный; маркерная доска; сетевые подключения локальной компьютерной сети с выходом в Internet; фантом реанимационный (торс) с выносным электрическим контролем для отработки навыков по оказанию первой помощи; учебно-методические материалы; обучающие презентации; иллюстрации с визуальным изображением; видеоматериалы; материалы для проведения практических занятий, например, иллюстрации с изображением определенных действий, когда обучающимся необходимо определить правильные и неправильные действия, указанные в иллюстрации; тесты и задания для обучающихся, позволяющих закрепить пройденный материал.  </p>
+                            </div>
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__title">Сведения об условиях питания обучающихся</p>
+                                <p class="faq-grid__text">Имеется помещение для приема пищи и отвечает санитарным требованиям.</p>
+                            </div>
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__title">Сведения об условиях охраны здоровья обучающихся</p>
+                                <p class="faq-grid__text">В образовательной организации созданы оптимальные условия для организации систематической физкультурно-оздоровительной работы, способствующей охране и укреплению физического и психического здоровья слушателей. Имеется спортивный уголок и массажное кресло.</p>
+                            </div>
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__title">Сведения о доступе к информационным системам и информационно-телекоммуникационным сетям</p>
+                                <p class="faq-grid__text">Единое окно доступа к образовательным ресурсам Министерство образования и науки Российской Федерации Министерство образования и молодежной политики Чувашской Республики</p>
+                            </div>
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <p class="faq-grid__title">Сведения об электронных образовательных ресурсах, к которым обеспечивается доступ обучающихся, в том числе:</p>
+                                <p class="faq-grid__title">Сведения о сторонних электронных образовательных и информационных ресурсах (при наличии):</p>
+                                <p class="faq-grid__title">Сведения о собственных электронных образовательных и информационных ресурсах (при наличии)</p>
+                                <p class="faq-grid__text">Министерство Образования и Науки Российской Федерации Министерство просвещения Российской Федерации Федеральный портал “Российское образование” Информационная система «Единое окно доступа к образовательным ресурсам» Федеральный центр информационно-образовательных ресурсов Единая коллекция цифровых образовательных ресурсов Федеральный портал “Информационно-коммуникационные технологии в образовании” Министерство образования и молодежной политики Чувашской Республики Многофункциональный центр предоставления государственных и муниципальных услуг БУ ЧР ДПО “Чувашский Республиканский институт образования” МО и МП ЧР Управление образования администрации города Чебоксары Научная электронная библиотека eLIBRARY.RU Университетская библиотека biblioclub.ru.  </p>
+                                <p class="faq-grid__text">Обучающиеся из числа лиц с ограниченными возможностями здоровья обеспечиваются печатными и (или) электронными образовательными ресурсами в формах, адаптированных к ограничениям их здоровья.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Платные образовательные услуги</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--one">
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__text">Положение о порядке оказания платных образовательных услуг</p>
+                                    <p class="faq-grid__text">Договор на оказание платных образовательных услуг</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__text">Цены на оказание платных образовательных услуг по дополнительным образовательным программам устанавливаются исходя из их рыночной стоимости.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Финансово-хозяйственная деятельность</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--one">
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__text">Целью деятельности ООО «Труд-Экспертиза» является предоставление образовательных услуг в области дополнительного профессионального образования на основании Лицензии на право осуществления образовательной деятельности № 86 от 10 сентября 2021 года, выданной Министерством образования и молодежной политики Чувашской Республики.</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__text">ООО «Труд-Экспертиза» не ведет образовательную деятельность, финансовое обеспечение которой осуществляется за счет бюджетных ассигнований федерального бюджета, бюджетов субъектов Российской Федерации или местных бюджетов.</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__text">Финансирование деятельности осуществляется по договорам об образовании за счет средств физических и (или) юридических лиц.</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__text">Поступление финансовых и материальных средств и отчёт об их расходовании по итогам финансового года отражается в бухгалтерской отчетности организации и в плане финансово-хозяйственной деятельности.</p>
+                                </div>
+                                <div>
+                                    <p class="faq-grid__text">План финансово-хозяйственной деятельности на 2022 год.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Вакантные места для приема (перевода) обучающихся</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--one">
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__text">Целью деятельности ООО «Труд-Экспертиза» является предоставление образовательных услуг в области дополнительного профессионального образования на основании Лицензии на право осуществления образовательной деятельности № 86 от 10 сентября 2021 года, выданной Министерством образования и молодежной политики Чувашской Республики.</p>
+                                </div>
+                            </div>
+                            <div class="faq-grid__item faq-grid__item--document">
+                                <ul class="standard-list">
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">количество вакантных мест для приёма (перевода) за счёт бюджетных ассигнований бюджетов субъекта Российской Федерации - нет</a>
+                                    </li>
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">количество вакантных мест для приёма (перевода) за счёт бюджетных ассигнований местных бюджетов - нет</a>
+                                    </li>
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">за счёт бюджетных ассигнований бюджета Чувашской Республики - нет</a>
+                                    </li>
+                                    <li class="standard-list__item">
+                                        <a href="#" class="standard-list__link faq-grid__text">количество вакантных мест для приёма (перевода) за счёт средств физических и (или) юридических лиц – 25.</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Доступная среда</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--one">
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__text">Обучающиеся из числа лиц с ограниченными возможностями здоровья обеспечиваются электронными образовательными ресурсами в формах, адаптированных к ограничениям их здоровья.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="faq__title accordion-tab">
+                        <p class="text-xl">Международное сотрудничество</p>
+                        <div class="icon icon--light btn-more-details">
+                            <div></div>
+                        </div>
+                    </button>
+                    <div class="accordion-content faq__body">
+                        <div class="faq-grid faq-grid--one">
+                            <div class="faq-grid__item">
+                                <div>
+                                    <p class="faq-grid__text">Информация о заключенных и планируемых к заключению договорах с иностранными и(или) международными организациями по вопросам образования и науки отсутствует.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="attention">
+                <div class="attention__info">
+                    <h2 class="title-h2 title-h2--white">Получите бесплатную консультацию или точный расчет стоимости</h2>
+                    <div class="form-contacts">
+                        <div class="form-contacts__item">
+                            <div class="icon icon--white">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25.8032 27.099C23.0113 29.8909 15.8615 27.2676 9.83352 21.2396C3.8056 15.2117 1.18227 8.06186 3.97414 5.26996L5.81238 3.43173C7.08142 2.16269 9.17248 2.19623 10.4829 3.50665L13.3302 6.35392C14.6406 7.66434 14.6741 9.75541 13.4051 11.0244L13.0103 11.4193C12.3251 12.1045 12.2581 13.2098 12.8947 13.9813C13.5088 14.7254 14.1709 15.4667 14.8887 16.1845C15.6065 16.9023 16.3477 17.5644 17.0919 18.1785C17.8634 18.8151 18.9687 18.7481 19.6539 18.0629L20.0487 17.6681C21.3178 16.399 23.4088 16.4326 24.7192 17.743L27.5665 20.5903C28.8769 21.9007 28.9105 23.9918 27.6414 25.2608L25.8032 27.099Z" stroke="#0A8E5A" stroke-width="2" />
+                                    <path d="M23.7525 11.0724C23.404 10.2221 22.8845 9.4255 22.1941 8.73511C21.5427 8.08371 20.7968 7.58447 20.0004 7.23739" stroke="#0A8E5A" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M20.0004 2.37658C21.907 3.0673 23.6959 4.17693 25.2245 5.70549C26.7914 7.2724 27.9181 9.11289 28.6046 11.0733" stroke="#0A8E5A" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="form-contacts__body">
+                                <a href="tel:88006007810" class="title-h5 form-contacts__link">8 (800) 600-78-10</a>
+                                <a href="tel:89373892479" class="title-h5  form-contacts__link">8 (937) 389-24-79</a>
+                            </div>
+                        </div>
+                        <div class="form-contacts__item">
+                            <div class="icon icon--white">
+                                <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="1.5" y="1" width="25" height="20" rx="6.25" stroke="#0A8E5A" stroke-width="2" />
+                                    <path d="M6.5 7.25L12.5 11.75C13.3889 12.4167 14.6111 12.4167 15.5 11.75L21.5 7.25" stroke="#0A8E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="form-contacts__body">
+                                <a href="mailto:sout@trud-rf.ru" class="title-h5 form-contacts__link">sout@trud-rf.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="attention__form">
+                    <p class="attention__title text-xl">Оставьте заявку, наши специалисты свяжутся с вами и проконсультируют по возникшим вопросам</p>
+                    <form method="POST" class="form">
+                        <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+                        <input type="text" class="form__input" name="phone" placeholder="+7 (999) 999 99-99">
+                        <div class="form__bottom">
+                            <button type="submit" class="btn btn--form btn-hover btn-hover--gradient">Заказать расчет</button>
+                            <small>Нажимая на кнопку “Отправить заявку “, вы даете согласие на обработку <a href="">персональных данных</a>, указанных в заявке.</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <script src="../src/js/jquery.min.js"></script>
+    <script src="../src/js/swiper-bundle.min.js"></script>
+    <script src="../src/js/swiper.js"></script>
+    <script src="../src/js/script.js"></script>
+</body>
+</html>
