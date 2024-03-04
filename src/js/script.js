@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     })
-    $('.form__input--phone').mask('+7 (999) 999-99-99');
+    if($('.form__input--phone').length) {
+        $('.form__input--phone').mask('+7 (999) 999-99-99');
+    }
 
     // Фиксированная шапка при скролле
     $(window).on('load resize', () => {

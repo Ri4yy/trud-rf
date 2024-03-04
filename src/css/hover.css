@@ -8,7 +8,7 @@
 }
 .link-hover--color_dark:hover {
     color: var(--green-dark) !important;
-}
+} 
 .link-hover:hover::before {
     width: 100%;
     left: 0;
@@ -31,6 +31,23 @@
 .btn-hover:hover {
     --x: 100%; 
     color: var(--white);
+}
+.btn-hover--transparent {
+    border: 2px solid var(--white);
+}
+.btn-hover--transparent:hover {
+    background-color: transparent !important;
+    border-color: var(--green-light);
+}
+.btn-hover--white:hover {
+    background-color: var(--white) !important;
+    border-color: var(--white);
+    color: var(--black) !important;
+}
+.btn-hover--green:hover {
+    background-color: var(--green-light) !important;
+    border-color: var(--green-light);
+    color: var(--white) !important;
 }
 .btn-hover--gradient {
     background: linear-gradient(315deg, var(--c1, var(--green-medium)), var(--c2, var(--green-light)) 51%, var(--c1, var(--green-medium))) var(--x, 0)/ 200% !important;
@@ -97,11 +114,15 @@
 }
 
 
+.cart-btn--clear {
+    transition: all .3s ease;
+}
 .cart-btn--clear svg {
     stroke: var(--black);
     transition: all .2s ease;
 }
 .cart-btn--clear:hover {
+    border-color: var(--green-light);
     background: transparent;
 }
 .cart-btn--clear:hover svg {
