@@ -52,6 +52,8 @@
             </div>
         </div>
     </header>
+
+    <button class="open-modal--success">Открыть</button>
     <main>
         <section class="hero container">
             <div class="hero__top">
@@ -630,6 +632,94 @@
             </div>
         </section>
     </main>
+
+    <!-- Формы регистрации и авторизации -->
+    <div class="modal modal-auth">
+        <div class="modal__wrapper">
+            <div class="modal__body">
+                <div class="modal__top">
+                    <p class="text-xl">Вход</p>
+                </div>
+                <form method="POST" action="#" class="form form-auth">
+                    <div class="form-input__wrapper">
+                        <input type="email" class="form__input" name="email" placeholder="Email">
+                        <small class="error-text" style="display: none;">Error text</small>
+                    </div>
+                    <input type="password" class="form__input" name="psw" placeholder="Пароль">
+
+                    <div class="form__bottom">
+                        <button type="submit" class="btn btn--form btn-hover btn-hover--gradient">Войти</button>
+                        <button class="form__link">Вы еще не зарегистрированы?</button>
+                    </div>
+                </form>
+            </div>
+        </div>		
+    </div>
+    <div class="modal modal-reg">
+        <div class="modal__wrapper">
+            <div class="modal__body">
+                <div class="modal__top">
+                    <p class="text-xl">Регистрация</p>
+                </div>
+                <form method="POST" action="#" class="form form-reg">
+                    <div class="form-reg__wrapper">
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="fio" placeholder="ФИО">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="mailing" placeholder="Почтовый адрес">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="tel" class="form__input" name="phone" placeholder="Телефон">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="doc" placeholder="Документы">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="email" class="form__input" name="email" placeholder="Email">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="work_place" placeholder="Место работы">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="date" class="form__input" name="date" placeholder="Дата рождения">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="position" placeholder="Должность">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="snils" placeholder="Номер СНИЛС">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <input type="password" class="form__input" name="psw" placeholder="Пароль">
+
+                        <button type="submit" class="btn btn--form btn-hover btn-hover--gradient form-reg__btn">Сохранить изменения</button>
+                    </div>
+                </form>
+            </div>
+        </div>		
+    </div>
+    <div class="modal modal-success">
+        <div class="modal__wrapper">
+            <div class="modal__body">
+                <div class="modal__top">
+                    <p class="text-xl">Вы успешно зарегистрировались!</p>
+                    <p class="modal-form__text">Теперь вы можете просматривать список заказов и отслеживать их статус.</p>
+                </div>
+                <button class="btn btn--grey modal-success__btn">Продолжить</button>
+            </div>
+        </div>		
+    </div>
+
+    <!-- Формы обратной связи -->
     <div class="modal modal-consult">
         <div class="modal__wrapper">
             <div class="modal__body">
@@ -693,6 +783,7 @@
             </div>
         </div>		
     </div>
+
     <footer class="footer">
         <div class="container">
             <div class="section">

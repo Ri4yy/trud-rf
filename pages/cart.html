@@ -3,11 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/main-css.css">
     <title>Корзина</title>
+    <style> 
+        .cart__all {
+            display: block;
+            margin: 0 0 10px 0;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+        .cart__all input[type=checkbox] {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            display: block;
+            width: 0;
+            height: 0;
+        }
+        .cart__all span {
+            display: inline-block;
+            position: relative; 
+            padding: 0 0 0 35px; 
+            line-height: 22px;    
+        }
+        .cart__all span:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #b2b5ba;
+            border-radius: 4px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        /* Checked */
+        .cart__all input[type=checkbox]:checked + span:before {
+            background-image: url('../src/assets/img/icons/checbkox.svg');
+            background-position: 60% 50%;
+            background-repeat: no-repeat;
+        }
+        
+        /* Hover */
+        .cart__all span:hover:before {
+            filter: brightness(110%);
+        }
+        
+        /* Active */
+        .cart__all span:active:before {
+            filter: brightness(80%);
+        }
+        
+        /* Disabled */
+        .cart__all input[type=checkbox]:disabled + span {
+            color: #666;
+            cursor: default;
+        }
+        .cart__all input[type=checkbox]:disabled + span:before {
+            filter: grayscale(100%);
+            opacity: 0.6;
+        }
+    </style>
 </head>
 <body>
-    <header class="header-container header-cart">
+    <header class="header-container">
         <div class="header">
             <a href="/" class="logo">
                 <img src="../src/assets/img/icons/logo.svg" class="logo__img" alt="">
@@ -53,7 +114,7 @@
         </div>
     </header>
     <main>
-        <section class="breadcrumb breadcrumb-cart container">
+        <section class="breadcrumb container">
             <div class="breadcrumb__wrapper">
                 <h2 class="title-h2 title-h2--white breadcrumb__title">Корзина</h2>
             </div>
@@ -62,56 +123,176 @@
         <section class="section-top container">
             <div class="cart">
                 <div class="cart__wrapper">
-                    <div class="cart__item">
-                        <div class="cart-body">
-                            <p class="cart-body__name">Дистанционное обучение  по пожарно-техническому минимуму (птм)</p>
-                            <p class="cart-body__description">Согласно законодательству обучение ПТМ необходимо проходить каждые 3 года. Мы имеем гослицензию на право ведения образовательной деятельности, поэтому обучаясь у нас, вы получите обязательный уровень знаний противопожарной безопасности.</p>
+                    <div class="cart__inner">
+                        <label class="cart__all">
+                            <input type="checkbox" name="all" id="all">
+                            <span >Одинаковые обучающиеся  для всех курсов</span>
+                        </label>
+
+                        <div class="cart__student">
+                            <div class="cart-student">
+                                <div class="cart-student__title">Обучающиеся курсов:</div>
+                                <ul class="cart-student__list"></ul>
+                                <div class="cart-student__bottom">
+                                    <button class="btn btn-hover btn-hover--gradient cart-student__more open-modal--students">Добавить стундента</button>
+                                    <button class="btn btn--grey cart-student__dlt">Удалить всех</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="cart__price"><span>1500</span> руб.</div>
-                        <button class="cart-btn--remove">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23047 9.84614L0.76893 17.2308C0.384315 17.6923 0.384315 18.4615 0.76893 18.9231C1.38431 19.3846 2.07662 19.3846 2.53816 18.9231L9.9997 11.5385L17.3074 18.9231C17.7689 19.3846 18.5382 19.3846 18.9997 18.9231C19.4612 18.4615 19.4612 17.6923 18.9997 17.2308L11.5382 9.84614L18.9228 2.53845C19.3843 2.07691 19.3843 1.30768 18.9228 0.846144C18.4612 0.461529 17.692 0.461529 17.2305 0.846144L9.9997 8.23076L2.53816 0.769221C2.15355 0.461529 1.38431 0.461529 0.922776 0.769221C0.461238 1.30768 0.461238 2.07691 0.922776 2.53845L8.23047 9.84614Z" fill="#B2B5BA" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="cart__item">
-                        <div class="cart-body">
-                            <p class="cart-body__name">Дистанционное обучение по пожарно-техническому минимуму (птм)</p>
-                            <p class="cart-body__description">Согласно законодательству обучение ПТМ необходимо проходить каждые 3 года. Мы имеем гослицензию на право ведения образовательной деятельности, поэтому обучаясь у нас, вы получите обязательный уровень знаний противопожарной безопасности.</p>
+                        <div class="basket-items-list-container">
+                            <div class="cart__item" data-name="Дистанционное обучение (птм1)" data-id="1">
+                                <div class="cart-body">
+                                    <p class="cart-body__name">Дистанционное обучение  по пожарно-техническому минимуму (птм)</p>
+                                    <p class="cart-body__description">Согласно законодательству обучение ПТМ необходимо проходить каждые 3 года. Мы имеем гослицензию на право ведения образовательной деятельности, поэтому обучаясь у нас, вы получите обязательный уровень знаний противопожарной безопасности.</p>
+
+                                    <div class="cart-student">
+                                        <div class="cart-student__title">Обучающиеся курсов:</div>
+                                        <ul class="cart-student__list"></ul>
+                                        <div class="cart-student__bottom">
+                                            <button class="btn btn-hover btn-hover--gradient cart-student__more cart-student__add open-modal--students" data-id="1">Добавить стундента</button>
+                                            <button class="btn btn--grey cart-student__dlt">Удалить всех</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__right">
+                                    <button class="cart-btn--remove">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23047 9.84614L0.76893 17.2308C0.384315 17.6923 0.384315 18.4615 0.76893 18.9231C1.38431 19.3846 2.07662 19.3846 2.53816 18.9231L9.9997 11.5385L17.3074 18.9231C17.7689 19.3846 18.5382 19.3846 18.9997 18.9231C19.4612 18.4615 19.4612 17.6923 18.9997 17.2308L11.5382 9.84614L18.9228 2.53845C19.3843 2.07691 19.3843 1.30768 18.9228 0.846144C18.4612 0.461529 17.692 0.461529 17.2305 0.846144L9.9997 8.23076L2.53816 0.769221C2.15355 0.461529 1.38431 0.461529 0.922776 0.769221C0.461238 1.30768 0.461238 2.07691 0.922776 2.53845L8.23047 9.84614Z" fill="#B2B5BA" />
+                                        </svg>
+                                    </button>
+                                    <div class="cart__price"><span>1500</span> руб.</div>
+                                </div>
+                            </div>
+                            <div class="cart__item" data-name="Дистанционное обучение (птм2)" data-id="2">
+                                <div class="cart-body">
+                                    <p class="cart-body__name">Дистанционное обучение  по пожарно-техническому минимуму (птм)</p>
+                                    <p class="cart-body__description">Согласно законодательству обучение ПТМ необходимо проходить каждые 3 года. Мы имеем гослицензию на право ведения образовательной деятельности, поэтому обучаясь у нас, вы получите обязательный уровень знаний противопожарной безопасности.</p>
+    
+                                    <div class="cart-student">
+                                        <div class="cart-student__title">Обучающиеся курсов:</div>
+                                        <ul class="cart-student__list"></ul>
+                                        <div class="cart-student__bottom">
+                                            <button class="btn btn-hover btn-hover--gradient cart-student__more cart-student__add open-modal--students" data-id="2">Добавить стундента</button>
+                                            <button class="btn btn--grey cart-student__dlt">Удалить всех</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__right">
+                                    <button class="cart-btn--remove">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23047 9.84614L0.76893 17.2308C0.384315 17.6923 0.384315 18.4615 0.76893 18.9231C1.38431 19.3846 2.07662 19.3846 2.53816 18.9231L9.9997 11.5385L17.3074 18.9231C17.7689 19.3846 18.5382 19.3846 18.9997 18.9231C19.4612 18.4615 19.4612 17.6923 18.9997 17.2308L11.5382 9.84614L18.9228 2.53845C19.3843 2.07691 19.3843 1.30768 18.9228 0.846144C18.4612 0.461529 17.692 0.461529 17.2305 0.846144L9.9997 8.23076L2.53816 0.769221C2.15355 0.461529 1.38431 0.461529 0.922776 0.769221C0.461238 1.30768 0.461238 2.07691 0.922776 2.53845L8.23047 9.84614Z" fill="#B2B5BA" />
+                                        </svg>
+                                    </button>
+                                    <div class="cart__price"><span>1500</span> руб.</div>
+                                </div>
+                            </div>
+                            <div class="cart__item" data-name="Дистанционное обучение (птм3)" data-id="3">
+                                <div class="cart-body">
+                                    <p class="cart-body__name">Дистанционное обучение  по пожарно-техническому минимуму (птм)</p>
+                                    <p class="cart-body__description">Согласно законодательству обучение ПТМ необходимо проходить каждые 3 года. Мы имеем гослицензию на право ведения образовательной деятельности, поэтому обучаясь у нас, вы получите обязательный уровень знаний противопожарной безопасности.</p>
+    
+                                    <div class="cart-student">
+                                        <div class="cart-student__title">Обучающиеся курсов:</div>
+                                        <ul class="cart-student__list">
+                                        </ul>
+                                        <div class="cart-student__bottom">
+                                            <button class="btn btn-hover btn-hover--gradient cart-student__more cart-student__add open-modal--students" data-id="3">Добавить стундента</button>
+                                            <button class="btn btn--grey cart-student__dlt">Удалить всех</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__right">
+                                    <button class="cart-btn--remove">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23047 9.84614L0.76893 17.2308C0.384315 17.6923 0.384315 18.4615 0.76893 18.9231C1.38431 19.3846 2.07662 19.3846 2.53816 18.9231L9.9997 11.5385L17.3074 18.9231C17.7689 19.3846 18.5382 19.3846 18.9997 18.9231C19.4612 18.4615 19.4612 17.6923 18.9997 17.2308L11.5382 9.84614L18.9228 2.53845C19.3843 2.07691 19.3843 1.30768 18.9228 0.846144C18.4612 0.461529 17.692 0.461529 17.2305 0.846144L9.9997 8.23076L2.53816 0.769221C2.15355 0.461529 1.38431 0.461529 0.922776 0.769221C0.461238 1.30768 0.461238 2.07691 0.922776 2.53845L8.23047 9.84614Z" fill="#B2B5BA" />
+                                        </svg>
+                                    </button>
+                                    <div class="cart__price"><span>1500</span> руб.</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="cart__price"><span>999999*</span> руб.</div>
-                        <button class="cart-btn--remove">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23047 9.84614L0.76893 17.2308C0.384315 17.6923 0.384315 18.4615 0.76893 18.9231C1.38431 19.3846 2.07662 19.3846 2.53816 18.9231L9.9997 11.5385L17.3074 18.9231C17.7689 19.3846 18.5382 19.3846 18.9997 18.9231C19.4612 18.4615 19.4612 17.6923 18.9997 17.2308L11.5382 9.84614L18.9228 2.53845C19.3843 2.07691 19.3843 1.30768 18.9228 0.846144C18.4612 0.461529 17.692 0.461529 17.2305 0.846144L9.9997 8.23076L2.53816 0.769221C2.15355 0.461529 1.38431 0.461529 0.922776 0.769221C0.461238 1.30768 0.461238 2.07691 0.922776 2.53845L8.23047 9.84614Z" fill="#B2B5BA" />
-                            </svg>
-                        </button>
                     </div>
-                </div>
-                <div class="cart__bottom">
-                    <div class="cart__action">
-                        <button class="cart-btn--clear">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14 10L14 17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M10 10L10 17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M18 6H6V20C6 20.5523 6.44772 21 7 21H17C17.5523 21 18 20.5523 18 20V6Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M4 6H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M15 3H9C8.44772 3 8 3.44772 8 4V6H16V4C16 3.44772 15.5523 3 15 3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <a href="order-1.html" class="btn cart-btn--checkout btn-hover btn-hover--gradient">Оформить заказ</a>
-                    </div>
-                    <div class="cart__current">
-                        <p>Итого: 2 шт на сумму <span>9999</span> руб.</p>
+
+                    <div class="total cart__total">
+                        <p class="total__title">Итого</p>
+                        <ul class="total-list">
+                            <li class="total-list__item">
+                                <p class="total-list__text">2 x<span> 850</span></p>
+                                <p class="total-list__text"><span>1700 </span>₽</p>
+                            </li>
+                            <li class="total-list__item">
+                                <p class="total-list__text">2 x<span> 850</span></p>
+                                <p class="total-list__text"><span>1700 </span>₽</p>
+                            </li>
+                        </ul>
+                        <p class="total-list__price">Итого: <span>3680</span> ₽</p>
+                        <a href="" class="btn btn-hover btn-hover--gradient total__btn">Перейти к оформлению</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <div class="modal modal-students">
+        <div class="modal__wrapper">
+            <div class="modal__body">
+                <div class="modal__top">
+                    <p class="text-xl">Введите данные обучающегося</p>
+                </div>
+                <form method="POST" action="#" class="form form-students">
+                    <input type="hidden" name="id_element" value="">
+                    <input type="hidden" name="title" value="">
+                    <div class="form-reg__wrapper">
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="fio" placeholder="ФИО">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="mailing" placeholder="Почтовый адрес">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="tel" class="form__input" name="phone" placeholder="Телефон">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="doc" placeholder="Документы">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="email" class="form__input" name="email" placeholder="Email">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="work_place" placeholder="Место работы">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="date" class="form__input" name="date" placeholder="Дата рождения">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="position" placeholder="Должность">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" class="form__input" name="snils" placeholder="Номер СНИЛС">
+                            <small class="error-text" style="display: none;">Error text</small>
+                        </div>
+                        <input type="password" class="form__input" name="psw" placeholder="Пароль">
+
+                        <button type="submit" class="btn btn--form btn-hover btn-hover--gradient form-reg__btn">Сохранить изменения</button>
+                    </div>
+                </form>
+            </div>
+        </div>		
+    </div>
+
     
     <script src="../src/js/jquery.min.js"></script>
     <script src="../src/js/swiper-bundle.min.js"></script>
     <script src="../src/js/swiper.js"></script>
     <script src="../src/js/script.js"></script>
+    <script src="../src/js/cart.js"></script>
 </body>
 </html>

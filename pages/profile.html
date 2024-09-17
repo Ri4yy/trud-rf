@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/main-css.css">
+    <title>Личный кабинет</title>
+</head>
+<body>
+    <header class="header-container">
+        <div class="header">
+            <a href="/" class="logo">
+                <img src="../src/assets/img/icons/logo.svg" class="logo__img" alt="">
+                <p class="logo__text logo__header">Труд экспертиза</p>
+            </a>
+            <div class="header-resolution" id="menu">
+                <div class="header-resolution__wrapper">
+                    <nav class="header__menu">
+                        <ul class="menu">
+                            <li class="menu__item"><a href="about.html" class="menu__link link-hover link-hover--color_medium">О компании</a></li>
+                            <li class="menu__item"><a href="services.html" class="menu__link link-hover link-hover--color_medium">Услуги</a></li>
+                            <li class="menu__item"><a href="laboratory.html" class="menu__link link-hover link-hover--color_medium">Лаборатория</a></li>
+                            <li class="menu__item"><a href="education.html" class="menu__link link-hover link-hover--color_medium">Учебный центр</a></li>
+                            <li class="menu__item"><a href="reviews.html" class="menu__link link-hover link-hover--color_medium">Отзывы</a></li>
+                            <li class="menu__item"><a href="articles.html" class="menu__link link-hover link-hover--color_medium">Статьи</a></li>
+                            <li class="menu__item"><a href="contacts.html" class="menu__link link-hover link-hover--color_medium">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__contacts">
+                        <a href="tel:88006007810" class="phone">8 (800) 600-78-10</a>
+                        <small>Звоните, если нужна помощь</small>
+                        <button class="btn btn--header btn-hover btn-hover--gradient open-modal--consult">Заказать консультацию</button>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="header__btn-wrapper">
+                <a href="!#" class="btn-phone">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6933 14.3763C12.222 15.8477 8.45388 14.4652 5.27708 11.2884C2.10029 8.11156 0.717757 4.34349 2.18911 2.87212L3.15789 1.90335C3.82669 1.23455 4.92871 1.25222 5.61931 1.94283L7.11986 3.44338C7.81047 4.13399 7.82815 5.23601 7.15935 5.90481L6.95127 6.11289C6.59017 6.47399 6.55485 7.0565 6.89037 7.4631C7.214 7.85528 7.56291 8.24592 7.94121 8.62423C8.31952 9.00253 8.71015 9.35144 9.10234 9.67507C9.50893 10.0106 10.0915 9.97527 10.4525 9.61417L10.6606 9.40609C11.3294 8.73729 12.4314 8.75497 13.1221 9.44558L14.6226 10.9461C15.3132 11.6367 15.3309 12.7388 14.6621 13.4076L13.6933 14.3763Z" stroke-width="1.5"/>
+                        <path d="M12.6125 5.93029C12.4288 5.48219 12.1551 5.06237 11.7912 4.69852C11.4479 4.35523 11.0548 4.09212 10.6351 3.9092" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M10.6352 1.34719C11.64 1.71121 12.5828 2.296 13.3884 3.10157C14.2142 3.92736 14.808 4.89732 15.1698 5.93049" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </a>
+                <button class="btn-menu small-btn-hover small-btn-hover--circle" id="openMenu">
+                    <div class="btn-menu__burger">
+                        <span class="btn-menu__line"></span>
+                        <span class="btn-menu__line"></span>
+                        <span class="btn-menu__line"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="breadcrumb container">
+            <div class="breadcrumb__wrapper">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a href="/" class="breadcrumb__link">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <p class="breadcrumb__link breadcrumb__link--active">></p>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <a href="" class="breadcrumb__link breadcrumb__link--active">Личный кабинет</a>
+                    </li>
+                </ul>
+                <h2 class="title-h2 title-h2--white breadcrumb__title">Личный кабинет</h2>
+            </div>
+        </section>
+
+        <section class="section section-top container">
+            <div class="personal">
+                <div class="tabs personal-tabs">
+                    <ul class="tabs__list personal-tabs__list">
+                        <li class="active-tab">Заказы</li>
+                        <li>Мой профиль</li>
+                    </ul>
+
+                    <ul class="personal-tabs__wrapper">
+                        <li class="tabs__content active">
+                            <div class="orders personal-tabs__content">
+                                <div class="orders__item">
+                                    <div class="orders__top">
+                                        <div class="orders__info">
+                                            <p class="orders__name"><span>Заказ 3</span> от 24.03.2024</p>
+                                            <p class="orders__status orders__status--wait">Ждет подтверждения</p>
+                                        </div>
+                                        <div class="orders__price">Стоимость: <span>3680</span> ₽</div>
+                                    </div>
+                                    <div class="orders__wrapper">
+                                        <div class="order">
+                                            <div class="order-course__wrapper">
+                                                <div class="order-course">
+                                                    <p class="order-course__name">Проведение СОУТ</p>
+                                                    <p class="order-course__desc">Специальная оценка условий труда (СОУТ) – процедура, направленная на выявление, оценку и измерение на местах факторов, способных причинить вред или создать риск сотрудникам предприятия.</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-student">
+                                                <div class="order-student__top">
+                                                    <p class="order-student__title">Обучающиеся курса:</p>
+                                                    <p class="order-student__num">10 студентов</p>
+                                                </div>
+                                                <ul class="order-student__list">
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Петрова Виктория Максимовна, Руководитель</p>
+                                                    </li>
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Иванов Петр Викторович, Должность</p>
+                                                    </li>
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Петрова Виктория Максимовна, Студент</p>
+                                                    </li>
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Петрова Виктория Максимовна, Студент</p>
+                                                    </li>
+                                                </ul>
+                                                <button class="btn btn--grey order-student__more">Показать ещё</button>
+                                            </div>
+                                        </div>
+                                        <div class="order">
+                                            <div class="order-course__wrapper">
+                                                <div class="order-course">
+                                                    <p class="order-course__name">Проведение СОУТ</p>
+                                                    <p class="order-course__desc">Специальная оценка условий труда (СОУТ) – процедура, направленная на выявление, оценку и измерение на местах факторов, способных причинить вред или создать риск сотрудникам предприятия.</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-student">
+                                                <div class="order-student__top">
+                                                    <p class="order-student__title">Обучающиеся курса:</p>
+                                                    <p class="order-student__num">10 студентов</p>
+                                                </div>
+                                                <ul class="order-student__list">
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Петрова Виктория Максимовна, Руководитель</p>
+                                                    </li>
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Иванов Петр Викторович, Должность</p>
+                                                    </li>
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Петрова Виктория Максимовна, Студент</p>
+                                                    </li>
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Петрова Виктория Максимовна, Студент</p>
+                                                    </li>
+                                                </ul>
+                                                <button class="btn btn--grey order-student__more">Показать ещё</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="orders__item">
+                                    <div class="orders__top">
+                                        <div class="orders__info">
+                                            <p class="orders__name"><span>Заказ 3</span> от 24.03.2024</p>
+                                            <p class="orders__status orders__status--wait">Ждет подтверждения</p>
+                                        </div>
+                                        <div class="orders__price">Стоимость: <span>3680</span> ₽</div>
+                                    </div>
+                                    <div class="orders__wrapper">
+                                        <div class="order">
+                                            <div class="order-course__wrapper">
+                                                <div class="order-course">
+                                                    <p class="order-course__name">Проведение СОУТ</p>
+                                                    <p class="order-course__desc">Специальная оценка условий труда (СОУТ) – процедура, направленная на выявление, оценку и измерение на местах факторов, способных причинить вред или создать риск сотрудникам предприятия.</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-student">
+                                                <div class="order-student__top">
+                                                    <p class="order-student__title">Обучающиеся курса:</p>
+                                                    <p class="order-student__num">10 студентов</p>
+                                                </div>
+                                                <ul class="order-student__list">
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Петрова Виктория Максимовна, Руководитель</p>
+                                                    </li>
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Иванов Петр Викторович, Должность</p>
+                                                    </li>
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Петрова Виктория Максимовна, Студент</p>
+                                                    </li>
+                                                    <li class="order-student__item">
+                                                        <p class="order-student__name">Петрова Виктория Максимовна, Студент</p>
+                                                    </li>
+                                                </ul>
+                                                <button class="btn btn--grey order-student__more">Показать ещё</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tabs__content">
+                            <div class="profile personal-tabs__content">
+                                <div class="profile__top">
+                                    <p class="profile__title">Изменить профиль</p>
+                                    <a href="" class="btn btn--grey profile__exit">Выйти из профиля</a>
+                                </div>
+                                <form action="#" class="form form-profile">
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form__input" name="fio" placeholder="ФИО">
+                                        <small class="error-text" style="display: none;">Error text</small>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form__input" name="mailing" placeholder="Почтовый адрес">
+                                        <small class="error-text" style="display: none;">Error text</small>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="tel" class="form__input" name="phone" placeholder="Телефон">
+                                        <small class="error-text" style="display: none;">Error text</small>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form__input" name="doc" placeholder="Документы">
+                                        <small class="error-text" style="display: none;">Error text</small>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="email" class="form__input" name="email" placeholder="Email">
+                                        <small class="error-text" style="display: none;">Error text</small>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form__input" name="work_place" placeholder="Место работы">
+                                        <small class="error-text" style="display: none;">Error text</small>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="date" class="form__input" name="date" placeholder="Дата рождения">
+                                        <small class="error-text" style="display: none;">Error text</small>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form__input" name="position" placeholder="Должность">
+                                        <small class="error-text" style="display: none;">Error text</small>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form__input" name="snils" placeholder="Номер СНИЛС">
+                                        <small class="error-text" style="display: none;">Error text</small>
+                                    </div>
+        
+                                    <input type="password" class="form__input" name="psw" placeholder="Пароль">
+                                    <input type="submit" class="btn btn-hover btn-hover--gradient profile__btn" value="Сохранить изменения">
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="../src/js/jquery.min.js"></script>
+    <script src="../src/js/fancybox.umd.js"></script>
+    <script src="../src/js/swiper-bundle.min.js"></script>
+    <script src="../src/js/swiper.js"></script>
+    <script src="../src/js/script.js"></script>
+</body>
+</html>

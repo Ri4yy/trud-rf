@@ -108,8 +108,73 @@ document.addEventListener("DOMContentLoaded", () => {
     showModal($('.open-modal--consult'), $('.modal-consult'));
     showModal($('.open-modal--calc'), $('.modal-calc'));
     showModal($('.open-modal--service'), $('.modal-service'));
+    showModal($('.open-modal--auth'), $('.modal-auth'));
+    showModal($('.open-modal--reg'), $('.modal-reg'));
+    showModal($('.open-modal--students'), $('.modal-students'));
+
+    showModal($('.open-modal--success'), $('.modal-success'));
 
     if($('.gallery-fancybox').length > 0) {
         Fancybox.bind('[data-fancybox="gallery"]', {});
+    }
+
+    // Показать еще курсы
+    const studentContainers = document.querySelectorAll('.order-student');
+
+    studentContainers.forEach(container => {
+        const items = container.querySelectorAll('.order-student__item');
+        const button = container.querySelector('.order-student__more');
+        let expanded = false;
+
+        function updateVisibility() {
+            items.forEach((item, index) => {
+                if (index < 3 || expanded) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        button.addEventListener('click', function() {
+            expanded = !expanded;
+            button.textContent = expanded ? 'Скрыть' : 'Показать ещё';
+            updateVisibility();
+        });
+
+        updateVisibility();
+    });
+
+    // Табы на странице заказа
+    const orderTabs = document.querySelectorAll('.order__content');
+    const prevButton = document.querySelector('.btn-prev');
+    const nextButton = document.querySelector('.btn-next');
+    let currentIndex = 0;
+
+    if(prevButton && nextButton) {
+
+        function showTab() {
+            orderTabs.forEach((tab, idx) => {
+                tab.classList.toggle('active', idx === currentIndex);
+            });
+            prevButton.style.display = currentIndex === 0 ? 'none' : 'inline-block';
+            nextButton.disabled = currentIndex === orderTabs.length - 1;
+        }
+
+        prevButton.addEventListener('click', function () {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showTab();
+            }
+        });
+    
+        nextButton.addEventListener('click', function () {
+            if (currentIndex < orderTabs.length - 1) {
+                currentIndex++;
+                showTab();
+            }
+        });
+        
+        showTab();
     }
 })
